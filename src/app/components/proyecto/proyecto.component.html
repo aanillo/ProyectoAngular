@@ -1,0 +1,59 @@
+<!-- Formulario para crear un nuevo proyecto -->
+<h1 class="h1-proyecto">Proyectos</h1>
+<section class="proyectos">
+    <div class="proyecto-container" [ngClass]="theme">
+    <article class="crear-proyecto">
+      <h2>Crear Proyecto</h2>
+    <form class="form-proyecto" (ngSubmit)="crearProyecto(nombre.value, descripcion.value, colorIdentificativo.value, fechaFin)">
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" #nombre required />
+      </div>
+      <div>
+        <label for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion" #descripcion required />
+      </div>
+      <div>
+        <label for="colorIdentificativo">Color Identificativo:</label>
+        <input type="color" id="colorIdentificativo" #colorIdentificativo required />
+      </div>
+      <div>
+        <label for="fechaFin">Fecha de Finalización:</label>
+        <input type="date" id="fechaFin" [(ngModel)]="fechaFin" [ngModelOptions]="{standalone: true}" required />
+      </div>
+      <button type="submit">Crear Proyecto</button>
+    </form>
+    </article>
+
+    <article class="listar-proyectos">
+      <h2>Mis Proyectos</h2>
+    <div *ngIf="proyectos.length === 0">
+      <p>No tienes proyectos creados aún. ¡Crea uno!</p>
+    </div>
+    <div *ngFor="let proyecto of proyectos" class="div-proyectos">
+      <div class="proyecto-card" [ngStyle]="{ backgroundColor: proyecto.colorIdentificativo }">
+        <h3>{{ proyecto.nombre }}</h3>
+        <p>{{ proyecto.descripcion }}</p>
+        <p><strong>Fecha Fin:</strong> {{ proyecto.fechaFin | date:'dd/MM/yyyy' }}</p>
+        <div>
+          <button class="btnTablero" (click)="verTablero(proyecto.id)">Ver Tablero</button>
+          <button class="btnEliminar" (click)="eliminarProyecto(proyecto.id)">Eliminar Proyecto</button>
+        </div>
+      </div>
+    </div>
+    </article>
+
+
+    </div>
+    
+  </section>
+  <div class="div-Home">
+    <h3>Volver a la página principal</h3>
+    <button type="button" class="btn-toggle" (click)="volverALaPaginaPrincipal()">Volver</button>
+  </div>
+
+  
+
+
+
+

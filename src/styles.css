@@ -1,0 +1,408 @@
+/* Reseteo de márgenes y padding para todo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    background: #f8f8f8; 
+  }
+  
+  /* Estilos para el modo oscuro */
+  html.dark, body.dark {
+    background-color: #121212;
+    color: white;
+  }
+  
+  /* Estilos del Header */
+  .index-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    padding: 0 40px; 
+    background: linear-gradient(to right, #b800a3, #e062d6);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  /* Modo oscuro para el header */
+  body.dark .index-header {
+    background: linear-gradient(to right, #0006b8, #6294e0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .index-header h1 {
+    margin-left: 20%;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+  }
+  
+  /* Modo oscuro para el título del header */
+  body.dark .index-header h1 {
+    color: #f5f5f5; 
+  }
+
+  .theme-toggle {
+    margin-right: 20%;
+  }
+  
+  .btn-toggle {
+    height: 35px;
+    width: 120px;
+    border-radius: 8px;
+    background-color: #3d90e3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.2s;
+  }
+  
+  /* Cambiar color de fondo en modo oscuro */
+  body.dark .btn-toggle {
+    background-color: #9b0091;
+  }
+  
+  .btn-toggle:hover {
+    background-color: #2b6fc0;
+    transform: scale(1.05); 
+  }
+  
+  /* Barra lateral (aside) */
+  aside {
+    position: fixed;
+    left: 0;
+    top: 80px;
+    width: 150px; 
+    height: 450px;
+    background: linear-gradient(to bottom, #c001bc, #9b0091);
+    display: flex;
+    flex-direction: column; 
+    align-items: stretch; 
+    justify-content: flex-start; 
+    margin-top: 50px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 10px;
+  }
+  
+  /* Modo oscuro para el aside */
+  body.dark aside {
+    background: linear-gradient(to bottom, #0006b8, #6294e0);
+  }
+
+  .img-logo {
+    margin-top: 20px;
+  }
+  
+  /* Estilo de los enlaces dentro del aside */
+  aside a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    margin: 10px 0;
+    font-size: 1.2em;
+    width: 100%; /* Asegura que los enlaces ocupen todo el ancho del aside */
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+  }
+  
+  /* Modo oscuro para los enlaces dentro del aside */
+  body.dark aside a {
+    color: white;
+  }
+  
+  /* Estilo de hover para los enlaces */
+  aside a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+  }
+  
+  /* Contenido principal */
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 80px);
+    padding: 40px;
+    width: 100%;
+  }
+  
+  /* Sección principal */
+  section {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  /* Estilos de la tarjeta */
+  .card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Estilo de la card en modo oscuro */
+  body.dark .card {
+    background-color: #1e1e1e;
+    color: #f5f5f5; /* Texto claro */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Contenedor de contenido */
+  .container {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .container h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #6b008e;
+  }
+  
+  /* En modo oscuro, cambia el color del título */
+  body.dark .container h2 {
+    color: white;
+  }
+  
+  .container p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  body.dark .container p {
+    color: #f5f5f5; /* Texto más claro para el modo oscuro */
+  }
+  
+  /* Título principal */
+  h1 {
+    font-size: 3em;
+    color: #6b008e;
+  }
+  
+  /* En modo oscuro, cambia el color del título principal */
+  body.dark h1 {
+    color: white;
+  }
+  
+  /* Estilo del footer */
+footer {
+    width: 100%; /* Asegura que ocupe todo el ancho de la página */
+    display: flex; 
+    margin-top: auto;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    background: linear-gradient(to right, #b800a3, #e062d6); /* Fondo con gradiente */
+    padding: 20px 0; /* Espaciado arriba y abajo */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil en la parte superior */
+  }
+  
+  /* Estilos del footer en modo oscuro */
+  body.dark footer {
+    background: linear-gradient(to right, #0006b8, #6294e0); /* Fondo diferente en modo oscuro */
+    color: white; /* Asegura que el texto sea blanco en modo oscuro */
+  }
+  
+  /* Estilo para el texto dentro del footer */
+  footer h1 {
+    font-size: 1.8em; /* Tamaño adecuado para el título */
+    color: white; /* Color blanco para el texto */
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* En modo oscuro, cambia el color del texto en el footer */
+  body.dark footer h1 {
+    color: #f5f5f5; /* Blanco más suave en modo oscuro */
+  }
+  
+
+/* Para proyecto */
+
+.h1-proyecto {
+    margin-left: 40%;
+    margin-top: 20px;
+}
+
+.proyectos {
+    display: flex;
+    justify-content: center; /* Centra los elementos */
+    align-items: flex-start;
+    min-height: calc(100vh - 200px);
+    padding: 40px;
+    width: calc(100% - 200px); /* Ajusta el ancho según el aside */
+    margin-left: 10%; /* Deja espacio para el aside */
+}
+
+.proyecto-container {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que los elementos se apilen */
+    justify-content: space-between; /* Distribuye los elementos */
+    gap: 50px; /* Espaciado entre los artículos */
+    width: 100%;
+}
+
+
+.crear-proyecto, .listar-proyecto {
+    flex-grow: 0; /* Evita que crezcan más de lo necesario */
+    width: auto; /* Evita que crezcan demasiado en pantallas grandes */
+}
+
+
+.form-proyecto {
+    margin-top: 10px;
+    border: solid 0.5px black;
+    border-radius: 5px;
+    width: 350px;
+    height: 400px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgb(238, 201, 242);
+    padding: 20px;  
+}
+
+.crear-proyecto form div {
+    margin-bottom: 15px;  
+}
+
+.crear-proyecto label {
+    display: block;  
+    margin-bottom: 5px;  
+    margin-top: 5px;
+    font-size: large;
+}
+
+.crear-proyecto input {
+    width: 70%;
+    padding: 8px;
+    margin-top: 5px; 
+}
+
+.crear-proyecto button {
+    margin-top: 10px;
+    height: 35px;
+    width: 120px;
+    border-radius: 8px;
+    background-color: #3d90e3;
+    color: white;
+    font-size: 1em;  
+    border: none;
+}
+
+.crear-proyecto button:hover {
+    transform: scale(1.05);
+}
+
+/* Modo oscuro para el formulario */
+body.dark .crear-proyecto { /* Fondo oscuro para el contenedor del formulario */
+    color: white; /* Texto claro en el formulario */
+}
+
+body.dark .form-proyecto {
+    background-color: #444; /* Fondo oscuro para el formulario */
+    color: white; /* Texto claro dentro del formulario */
+    border: solid 0.5px #777; /* Bordes más claros */
+}
+
+body.dark .crear-proyecto label {
+    color: #ddd; /* Color de las etiquetas más claro */
+}
+
+body.dark .crear-proyecto input {
+    background-color: #555; /* Fondo oscuro para los inputs */
+    color: white; /* Color blanco para el texto */
+    border: 1px solid #777; /* Bordes más claros para los inputs */
+}
+
+body.dark .crear-proyecto button {
+    background-color: #7a006e; /* Fondo más brillante para el botón en modo oscuro */
+    color: white; /* Texto blanco en el botón */
+}
+
+body.dark .crear-proyecto button:hover {
+    transform: scale(1.05);  /* Fondo más oscuro para el hover */
+}
+
+body.dark .crear-proyecto input::placeholder {
+    color: #bbb; /* Color de los placeholders más claros */
+}
+
+
+.div-Home {
+    display: flex;            
+    flex-wrap: nowrap;        
+    justify-content: flex-start; 
+    gap: 30px;
+    margin-left: 30%;      
+    margin-bottom: 20px;
+}
+
+.listar-proyecto {
+    width: 100%;
+    border: solid 0.5px black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 5px; 
+    grid-auto-rows: auto; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.proyecto-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px; 
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+.proyecto-card p {
+    font-size: 0.8em;
+}
+
+.btnTablero {
+    height: 25px;
+    width: 120px;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: rgb(173, 221, 171);
+}
+
+.btnTablero:hover {
+    transform: scale(1.1);
+}
+
+.btnEliminar {
+    height: 25px;
+    width: 120px;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: rgb(218, 161, 161);
+}
+
+.btnEliminar:hover {
+    transform: scale(1.1);
+}

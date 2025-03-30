@@ -1,0 +1,38 @@
+<header class="index-header">
+  <h1>NetTask</h1>
+  <div class="theme-toggle">
+    <button class="btn-toggle" (click)="toggleTheme()">
+      Modo {{ theme === 'light' ? 'Oscuro' : 'Claro' }}
+    </button>
+  </div>
+</header>
+
+
+<main class="main-content" *ngIf="currentRoute === '/'">
+  <section >
+    <h1>{{ title }}</h1>
+    <img src="..//public/logo.jpg" alt="logotipo" height="300px">
+    <article class="card">
+      <div class="container">
+        <h2>Bienvenido a NetTask</h2>
+        <p>
+          Tu gestor de proyectos y tareas. Aquí podrás gestionar tus proyectos y tareas, personalizarlas, aplicarles estados y llevar un control efectivo de tu trabajo.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  
+</main>
+
+<aside>
+  <img class="img-logo" src="..//public/logo.jpg" alt="logotipo" width="150px" height="100px">
+  <a class="button-link" (click)="proyectos()">Proyectos</a><br>
+  <a class="button-link" (click)="tareas()">Tareas</a>
+</aside>
+
+<router-outlet></router-outlet>
+
+<footer>
+  <h1>NetTask</h1>
+</footer>
