@@ -24,7 +24,7 @@ export class ProyectoComponent {
     this.cargarProyectos();
   }
 
-  // Cargar los proyectos desde localStorage
+ 
   cargarProyectos(): void {
     if (typeof window !== 'undefined' && window.localStorage) {
       const proyectosGuardados = localStorage.getItem('proyectos');
@@ -34,7 +34,7 @@ export class ProyectoComponent {
     }
   }
 
-  // Crear un nuevo proyecto
+  
   crearProyecto(nombre: string, descripcion: string, colorIdentificativo: string, fechaFin: string): void {
     const nuevoProyecto: Proyecto = {
       id: this.generarId(),
@@ -57,10 +57,10 @@ export class ProyectoComponent {
   }
 
   volverALaPaginaPrincipal(): void {
-    this.router.navigate(['/']);  // Redirigir a la ruta principal
+    this.router.navigate(['/']); 
   }
 
-  // Generar un ID único para el proyecto
+  
   generarId(): string {
     let lastId = localStorage.getItem('lastId');
     if (!lastId) {
@@ -71,14 +71,14 @@ export class ProyectoComponent {
     return newId;
   }
 
-  // Guardar proyectos en localStorage
+  
   guardarProyectos(): void {
     if (typeof window !== 'undefined' && window.localStorage) {
       localStorage.setItem('proyectos', JSON.stringify(this.proyectos));
     }
   }
 
-  // Crear estados predeterminados del proyecto
+  
   crearEstados(): Estado[] {
     const estados: Estado[] = [
       { id: this.generarId(), nombre: 'Por hacer' },
@@ -89,7 +89,7 @@ export class ProyectoComponent {
     return estados;
   }
 
-  // Inicializar las tareas por cada estado
+  
   tareasPorEstado(): { [estadoNombre: string]: Tarea[] } {
     const tareasPorEstado: { [estadoNombre: string]: Tarea[] } = {};
     const estados = this.crearEstados();

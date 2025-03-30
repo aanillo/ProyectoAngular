@@ -1,1 +1,57 @@
-<p>tarea works!</p>
+<h1 class="tablero-title">Gestión de Tareas: Proyecto {{ proyecto?.nombre }}</h1>
+
+<section class="tareas">
+    <div class="tarea-container" [ngClass]="theme">
+        <article class="crear-tarea">
+            <h2>Crear Nueva Tarea en Proyecto: {{ proyecto?.nombre }}</h2>
+            <form class="form-tarea" (ngSubmit)="crearTarea(titulo.value, descripcion.value, estadoSeleccionado, fechaLimite, prioridadSeleccionada, etiquetas.split(','), usuarioSeleccionado)">
+                <div>
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo" #titulo required />
+                </div>
+                <div>
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" #descripcion name="descripcion" required></textarea>
+                </div>
+                <div>
+                    <label for="estado">Estado:</label>
+                    <select id="estado" [(ngModel)]="estadoSeleccionado" name="estado" required>
+                        <option *ngFor="let estado of estados" [ngValue]="estado">{{ estado.nombre }}</option>
+                    </select>            
+                </div>
+                <div>
+                    <label for="fechaLimite">Fecha Límite:</label>
+                    <input type="date" id="fechaLimite" [(ngModel)]="fechaLimite" name="fechaLimite" required />
+                </div>
+                <div>
+                    <label for="prioridad">Prioridad:</label>
+                    <select id="prioridad" [(ngModel)]="prioridadSeleccionada" name="prioridad" required>
+                        <option value="alta">Alta</option>
+                        <option value="media">Media</option>
+                        <option value="baja">Baja</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="etiquetas">Etiquetas (separadas por comas):</label>
+                    <input type="text" id="etiquetas" [(ngModel)]="etiquetas" name="etiquetas" />
+                </div>
+                <div>
+                    <label for="usuarioAsignado">Usuario Asignado:</label>
+                    <select id="usuarioAsignado" [(ngModel)]="usuarioSeleccionado" name="usuarioAsignado">
+                        <option [ngValue]="null">No asignado</option>
+                        <option *ngFor="let usuario of usuarios" [ngValue]="usuario">{{ usuario?.nombre || 'Usuario desconocido' }}</option>
+                    </select>
+                </div>
+                <button type="submit">Agregar Tarea</button>
+            </form>
+        </article>
+
+        
+        
+    </div>
+</section>
+
+<div class="div-Home">
+    <h3>Volver a la página principal</h3>
+    <button type="button" class="btn-toggle" (click)="volverALaPaginaPrincipal()">Volver</button>
+</div>

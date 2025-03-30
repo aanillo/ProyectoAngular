@@ -346,6 +346,105 @@ body.dark .crear-proyecto input::placeholder {
     color: #bbb; /* Color de los placeholders más claros */
 }
 
+.tareas {
+  display: flex;
+  justify-content: center; /* Centra los elementos */
+  align-items: flex-start;
+  min-height: calc(100vh - 200px);
+  padding: 40px;
+  width: calc(100% - 200px); /* Ajusta el ancho según el aside */
+  margin-left: 10%; /* Deja espacio para el aside */
+}
+
+.tarea-container {
+  margin-left: 30%;
+  display: flex;
+  flex-wrap: nowrap; /* Evita que los elementos se apilen */
+  justify-content: space-between; /* Distribuye los elementos */
+  gap: 50px; /* Espaciado entre los artículos */
+  width: 100%;
+}
+
+
+.form-tarea {
+  margin-top: 10px;
+  margin-left: 20%;
+  border: solid 0.5px black;
+  border-radius: 5px;
+  width: 350px;
+  height: 600px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgb(238, 201, 242);
+  padding: 20px;  
+}
+
+.crear-tarea form div {
+  margin-bottom: 15px;  
+}
+
+.crear-tarea label {
+  display: block;  
+  margin-bottom: 5px;  
+  margin-top: 5px;
+  font-size: large;
+}
+
+.crear-tarea input {
+  width: 70%;
+  padding: 8px;
+  margin-top: 5px; 
+}
+
+.crear-tarea button {
+  margin-top: 10px;
+  height: 35px;
+  width: 120px;
+  border-radius: 8px;
+  background-color: #3d90e3;
+  color: white;
+  font-size: 1em;  
+  border: none;
+}
+
+.crear-tarea button:hover {
+  transform: scale(1.05);
+}
+
+/* Modo oscuro para el formulario */
+body.dark .crear-proyecto { /* Fondo oscuro para el contenedor del formulario */
+  color: white; /* Texto claro en el formulario */
+}
+
+body.dark .form-proyecto {
+  background-color: #444; /* Fondo oscuro para el formulario */
+  color: white; /* Texto claro dentro del formulario */
+  border: solid 0.5px #777; /* Bordes más claros */
+}
+
+body.dark .crear-proyecto label {
+  color: #ddd; /* Color de las etiquetas más claro */
+}
+
+body.dark .crear-proyecto input {
+  background-color: #555; /* Fondo oscuro para los inputs */
+  color: white; /* Color blanco para el texto */
+  border: 1px solid #777; /* Bordes más claros para los inputs */
+}
+
+body.dark .crear-proyecto button {
+  background-color: #7a006e; /* Fondo más brillante para el botón en modo oscuro */
+  color: white; /* Texto blanco en el botón */
+}
+
+body.dark .crear-proyecto button:hover {
+  transform: scale(1.05);  /* Fondo más oscuro para el hover */
+}
+
+body.dark .crear-proyecto input::placeholder {
+  color: #bbb; /* Color de los placeholders más claros */
+}
+
 
 .div-Home {
     display: flex;            
@@ -365,6 +464,17 @@ body.dark .crear-proyecto input::placeholder {
     grid-auto-rows: auto; 
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lista-tarea {
+  width: 100%;
+  border: solid 0.5px black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 5px; 
+  grid-auto-rows: auto; 
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
@@ -405,4 +515,62 @@ body.dark .crear-proyecto input::placeholder {
 
 .btnEliminar:hover {
     transform: scale(1.1);
+}
+
+.tablero {
+  margin-left: 20%;
+}
+
+.tarea-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin-bottom: 20px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarea-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin-bottom: 20px;
+  flex: 1; 
+  max-width: 400px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.tablero {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row; 
+  align-items: flex-start; 
+  gap: 50px; 
+}
+
+
+.lista-tarea {
+  margin-top: 40px;
+  flex: 1; 
+  border: none;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start; 
+  gap: 15px; 
+}
+
+.tablero-title {
+  margin-top: 20px;
+  margin-left: 15%;
 }

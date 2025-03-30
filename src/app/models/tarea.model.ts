@@ -11,4 +11,5 @@ export interface Tarea {
     usuarioAsignado?: Usuario; 
     estado: Estado;       
     tiempoDedicado?: string;
+    proyectoId: string;
 }

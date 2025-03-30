@@ -1,0 +1,30 @@
+<h1 class="tablero-title">{{ proyecto?.nombre }} - Tablero de Tareas</h1>
+
+<div class="tablero">
+    
+    <div class="tarea-card" [ngStyle]="{ backgroundColor: proyecto?.colorIdentificativo }">
+      <h2>{{ proyecto?.nombre }}</h2><br>
+      <p>{{ proyecto?.descripcion }}</p><br>
+      <p><strong>Fecha Fin:</strong> {{ proyecto?.fechaFin | date:'dd/MM/yyyy' }}</p><br>
+      <h2>Todas las tareas del proyecto</h2><br>
+      <div *ngFor="let tarea of tareas">
+        <div class="mostrar-tareas"><br>
+          <h3>{{ tarea.titulo }}</h3>
+          <p>{{ tarea.descripcion }}</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="lista-tarea">
+        <h3>Crea una tarea nueva para el proyecto</h3>
+        <button class="btn-toggle" (click)="crearTarea(proyectoId)">Crear Tarea</button>
+    </div>
+ 
+    
+</div>
+
+<div class="div-Home">
+    <h3>Volver al proyecto: </h3>
+    <button class="btn-toggle" (click)="volverAProyectos()">Volver</button>
+</div>
+  
