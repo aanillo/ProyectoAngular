@@ -1,0 +1,80 @@
+<div class="book">
+    <div class="titulo">
+        <h1>RESERVA</h1>
+    </div>
+
+    <p>En <i><strong>la casa napolitana</strong></i> podrás disfrutar de una gran variedad de pizzas italianas, pasta entrantes y los mejores postres desde el corazón del centro de Cádiz. <br>Disfruta de una gran experiencia con nosotros.</p>
+    <p>Nos encontrarás en calle Torre, número 5 - Cádiz</p>
+    <p>Abierto de miércoles a domingo, de 13:00 a 17:30 y de 20:00 a 00:30</p>
+
+     <div class="book_menu">
+        <div class="book_calendar">
+            <app-calendar (dateSelected)="onDateSelected($event)"></app-calendar>
+        </div>
+
+        <div class="book_data">
+            <form (ngSubmit)="confirmarReserva()" #reservaForm="ngForm">
+                <div class="form_data">
+                    <div class="element">
+                        <label for="personas">Personas:</label>
+                        <select id="personas" [(ngModel)]="selectedPeople" name="personas">
+                            <option class="text" value="Personas" disabled selected>Selecciona el número de personas</option>
+                           <option *ngFor="let count of peopleOptions" [value]="count" required>
+                                {{ count }} {{ count > 1 ? 'Personas' : 'Persona'}}
+                           </option>
+                        </select>
+                    </div>
+                    <div class="element">
+                        <label for="time">Hora:</label>
+                        <select id="time" [(ngModel)]="selectedTime" name="personas">
+                            <option class="text" value="Hora" disabled selected>Selecciona una hora</option>
+                            <option *ngFor="let time of timeOptions" [value]="time" [disabled]="isTimeUnavailable(time)" required>
+                                {{ time }}
+                            </option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="element">
+                        <label for="zona">Zona:</label>
+                        <select id="zona" [(ngModel)]="selectedZone" name="personas">
+                            <option class="text" value="Zona" disabled selected>Selecciona una zona</option>
+                           <option *ngFor="let zone of zoneOptions" [value]="zone" required>
+                                {{ zone }} 
+                           </option>
+                        </select>
+                    </div>
+                    <div class="element" style="margin-top: 3%;">
+                        <label for="email">Email:</label>
+                        <input id="email" name="email" placeholder="Introduzca su email" [(ngModel)]="email" 
+                        required 
+                        [pattern]="'^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'" 
+                        #emailInput="ngModel">
+                        
+                        <div *ngIf="emailInput.invalid && emailInput.touched" class="error">
+                            <p>Por favor ingrese un email válido.</p>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <p class="text_info">Si desea reservar una mesa para 10 personas o más, llame a <strong>956223344</strong></p>
+                    </div>
+                    <button class="btn_form" type="submit"><strong>RESERVAR</strong></button>
+            </form>
+        </div>
+     </div>
+
+     <div class="imagenes">
+        <img src="/img/pizza2.jpg" alt="pasta" width="350" height="250">
+        <img src="/img/azotea.jpg" alt="pasta" width="450" height="300">
+        <img src="/img/brindis.jpg" alt="pasta" width="350" height="250">
+     </div>
+     
+
+     <div class="imagenes2">
+        <img src="/img/pizza.png" alt="pasta" width="100">
+        <div class="volver">
+            <h3>Volver:</h3>
+            <button (click)="goToInicio()" class="btn_inicio"><strong>Inicio</strong></button>
+        </div>
+        <img src="/img/pizza.png" alt="pasta" width="100">
+     </div>
+</div>

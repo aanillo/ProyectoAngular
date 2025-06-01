@@ -1,0 +1,181 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Spectral', serif;
+}
+
+main {
+    flex: 1;
+}
+
+body.dark main {
+    background-color: #252525;
+}
+
+html.dark, body.dark {
+    background-color: #252525;
+}
+
+body.dark h1 {
+    color: white;
+}
+
+body.dark h2 {
+    color: white;
+}
+
+body.dark h3 {
+    color: white;
+}
+
+body.dark p {
+    color: white;
+}
+
+body.dark label {
+    color: white;
+}
+
+body.dark .calendar-week {
+    color: white;
+}
+
+body.dark .calendar-weekday-header {
+    color: white;
+}
+
+body.dark .titulo {
+    background-color: #353434;
+}
+
+body.dark .bienvenida {
+    background-color: #353434;
+}
+
+body.dark .book_menu {
+    background-color: #353434;
+}
+
+body.dark .datos h3 {
+    color: black;
+}
+
+body.dark .datos p {
+    color: black;
+}
+
+body.dark .menu h3 {
+    color: black;
+}
+
+body.dark .datos {
+    background-color: #353434;
+    color: white;
+}
+
+body.dark .datos h3 {
+    color: white;
+}
+
+body.dark .datos p {
+    color: white;
+}
+
+body.dark .item-area {
+    background-color: #353434;
+}
+
+body.dark .item-card {
+    background-color: #252525;
+    color: white;
+}
+
+body.dark .food-item {
+    background-color: #353434;
+}
+
+body.dark .familia {
+    background-color: rgb(126, 40, 40);
+}
+
+body.dark .texto {
+    background: linear-gradient(to right, rgb(126, 40, 40), rgb(150, 81, 81));
+}
+
+body.dark .texto2 {
+    background: linear-gradient(to right, rgb(150, 81, 81), rgb(126, 40, 40));
+}
+
+body.dark .info_title1 {
+    color: black;
+}
+
+body.dark .info_title2 {
+    color: black;
+}
+
+body.dark .info_title3 {
+    color: black;
+}
+
+body.dark .div-foto1 h3 {
+    color: white;
+}
+
+body.dark .div-foto2 h3 {
+    color: white;
+}
+
+
+body.dark .texto h3,
+body.dark .texto p,
+body.dark .texto a,
+body.dark .texto i,
+body.dark .texto button {
+    color: white; 
+}
+
+
+body.dark .texto2 h3,
+body.dark .texto2 p,
+body.dark .texto2 a,
+body.dark .texto2 i,
+body.dark .texto2 button {
+    color: white; 
+}
+
+
+body.dark .texto a,
+body.dark .texto2 a {
+    color: white; 
+    text-decoration: none; 
+}
+
+body.dark .texto a i,
+body.dark .texto2 a i,
+body.dark .texto i,
+body.dark .texto2 i {
+    color: white !important; 
+    text-decoration: none; 
+}
+
+
+body.dark .texto button,
+body.dark .texto2 button {
+    color: white; 
+    background-color: rgb(126, 40, 40); 
+    border: 2px solid white; 
+}
+
+body.dark .btn_inicio {
+    color: white;
+    border: solid 2px white;
+    background-color: rgb(126, 40, 40);
+}
+
+body.dark .btn_form {
+    color: white;
+    border: solid 2px white;
+    background-color: rgb(126, 40, 40);
+}

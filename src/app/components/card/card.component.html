@@ -1,0 +1,37 @@
+<div class="carta">
+    <div class="titulo">
+        <h1>CARTA</h1>
+    </div>
+
+    <h2>Elige categoría</h2>
+    <div class="select">
+        <a class="filter" (click)="filterByCategory('entrante')"><strong>Entrante</strong></a>
+        <a class="filter" (click)="filterByCategory('pasta')"><strong>Pasta</strong></a>
+        <a class="filter" (click)="filterByCategory('pizza')"><strong>Pizza</strong></a>
+        <a class="filter" (click)="filterByCategory('postre')"><strong>Postre</strong></a>
+    </div>
+
+    <div class="category" *ngIf="selectedCategory">
+        <h2 class="category_title">{{ selectedCategory }}</h2>
+    </div>
+
+    <div class="food_list">
+        <div *ngFor="let food of filteredFoods" class="food-item">
+            <div class="area_nombre">
+                <h3>{{food.nombre}}</h3>
+            </div>
+            <img [src]="food.foto" alt="{{food.nombre}}" width="400" height="300">
+            <button (click)="goToItem(food.id)" class="btn_select"><strong>Info</strong></button>
+        </div>
+    </div>
+
+    <div class="imagenes2">
+        <img src="/img/pizza.png" alt="pasta" width="100">
+        <div class="volver">
+            <h3>Volver:</h3>
+            <button (click)="goToInicio()" class="btn_inicio"><strong>Inicio</strong></button>
+        </div>
+        <img src="/img/pizza.png" alt="pasta" width="100">
+    </div>
+
+</div>

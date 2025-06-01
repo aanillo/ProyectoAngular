@@ -1,0 +1,31 @@
+<div class="confirm">
+    <div class="titulo">
+        <h1>RESERVA</h1>
+    </div>
+
+    <div *ngIf="data">
+        <h1>¡Reserva confirmada con éxito!</h1>
+        <div class="div-datosReserva">
+            <h2>Datos de la reserva</h2>
+            <p><strong>Email:</strong> {{ data.email }}</p>
+            <div class="datosReserva">
+                <p><strong>Fecha seleccionada:</strong> {{ data.date }}</p>
+                <p><strong>Personas:</strong> {{ data.people }}</p>
+                <p><strong>Hora:</strong> {{ data.time }}</p>
+                <p><strong>Zona:</strong> {{ data.zone }}</p>
+            </div>
+        </div>
+        <p class="p-contacto">Si existen errores en los datos, contacte con <strong>casanapolitana&#64;rrhh.com</strong> o llame al número <strong>956223344</strong></p>
+        <h1>Le esperamos con muchas ganas</h1>
+      
+        <div class="imagenes2">
+            <img src="/img/pizza.png" alt="pasta" width="100">
+            <div class="volver">
+                <h3>Volver:</h3>
+                <button (click)="goToInicio()" class="btn_inicio"><strong>Inicio</strong></button>
+            </div>
+            <img src="/img/pizza.png" alt="pasta" width="100">
+         </div>
+      </div>
+    
+</div>

@@ -1,0 +1,42 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(126, 40, 40);
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+.rrss {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.enlaces_rrss {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+}
+
+.icon_rrss {
+    color: white;
+}
+
+
+@media (max-width: 600px) {
+        
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+}

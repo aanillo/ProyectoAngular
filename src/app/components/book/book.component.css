@@ -1,0 +1,223 @@
+.book {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 2%;
+}
+
+.titulo {
+    background-color: #f0efef; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.book_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #f0efef; 
+    padding: 20px 20px 20px 20px;
+    box-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.1), 
+        0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book_calendar {
+    display: flex; 
+    justify-content: center;  
+    align-items: center;
+    padding: 10px;
+}
+
+.book_data {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    padding: 10px;
+}
+
+.form_data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    gap: 20px; 
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+.form_data > div {
+    flex: 1;  
+    margin-bottom: 1%;
+}
+
+
+label {
+    font-size: 1.2em;
+    text-align: left;
+    display: block; 
+}
+
+select {
+    width: 100%;  
+    padding: 8px; 
+    font-size: 1em; 
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+select option {
+    font-size: 1em; 
+}
+
+.text_info {
+    margin-top: 5%;
+    font-size: 1.2em;
+}
+
+.btn_form {
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: rgb(233, 122, 122);
+    border: 2px solid black;
+}
+
+.btn_form:hover {
+    transform: scale(1.1);
+    background-color: rgb(192, 58, 58);
+    transition: 1s ease;
+}
+
+.imagenes {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.imagenes2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30%;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.volver {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10%;
+}
+
+.btn_inicio {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(192, 58, 58);
+    border: solid 2px black;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    width: 80%;
+    height: 40px;
+}
+
+.btn_inicio:hover {
+    transform: scale(1.2);
+    transition: 1s ease;
+}
+
+.element input {
+    width: 100%;  
+    padding: 8px; 
+    font-size: 1em; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+}
+
+
+@media (max-width: 1024px) {
+
+    .book {
+        margin-top: 15%;
+    }
+
+    .book p {
+        width: 90%;
+    }
+
+    .book_menu {
+        width: 80%;
+    }
+
+    .imagenes {
+        justify-content: center;
+    }
+
+    .imagenes img {
+        width: 270px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+        
+    .book {
+        margin-top: 180px; 
+        padding-top: 20px;
+    }
+
+    .book_menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .book_data {
+        width: 90%;
+    }
+
+    .imagenes {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-top: 5%;
+    }
+
+    .imagenes img {
+        width: 350px;
+    }
+
+    .imagenes2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+    }
+
+}

@@ -1,0 +1,37 @@
+<div class="calendar">
+
+    <div class="calendar_options">
+          <div class="calendar-controls">
+            <button (click)="changeMonth(-1)">
+              <i class="fa fa-chevron-left"></i>
+            </button>
+            <span><strong>{{ monthNames[selectedMonth] }} {{ selectedYear }}</strong></span>
+            <button (click)="changeMonth(1)">
+              <i class="fa fa-chevron-right"></i>
+            </button>
+          </div>
+    </div>
+  
+    <div class="calendar-month">
+        <div class="calendar-weekday-header">
+          <div *ngFor="let day of weekDays">{{ day }}</div>
+        </div>
+      
+        <div *ngFor="let week of monthDays" class="calendar-week">
+          <div *ngFor="let day of week"
+              class="calendar-day"
+              [class.disabled]="isPastDate(day)"
+              [class.selected]="selectedDate?.getDate() === toNumber(day) &&
+                                selectedDate?.getMonth() === selectedMonth &&
+                                selectedDate?.getFullYear() === selectedYear"
+              (click)="selectDate(day)">
+            {{ day }}
+          </div>
+
+        </div>
+      </div>
+      
+  </div>
+  
+
+  
