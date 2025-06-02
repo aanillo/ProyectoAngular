@@ -140,7 +140,11 @@ h1 {
 @media (max-width: 1024px) {
 
     .item {
-        margin-top: 15%;
+        margin-top: 180px; 
+        padding-top: 20px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .item-area {

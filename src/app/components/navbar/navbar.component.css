@@ -101,13 +101,18 @@ header {
     }
     
     .nav_menu {
-        width: 45%;
+        width: 55%;
         justify-content: flex-start;
         order: 1;
+        gap: 2%;
     }
 
     .nav_menu a {
-        font-size: 0.8em;
+        font-size: 1.1em;
+    }
+
+    .nav_menu a:hover {
+        font-size: 1.2em;
     }
 
     .title {
@@ -158,6 +163,7 @@ header {
         align-items: center;
         padding: 10px;
         height: auto;
+        width: 100%;
     }
 
     .nav_menu,
@@ -171,11 +177,17 @@ header {
 
     .nav_menu {
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 5px;
+        justify-content: center;
+    }
+
+    .nav_menu {
+        font-size: 0.9em;
+        padding: 0 10px 10px 0;
     }
 
     .nav_menu a:hover {
-        font-size: 0.7em;
+        font-size: 1em;
     }
 
     .icons {
