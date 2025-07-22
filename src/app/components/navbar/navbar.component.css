@@ -20,7 +20,7 @@ header {
     align-items: center;
     gap: 5%;
     width: 30%;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .nav_menu a:hover {
@@ -85,7 +85,7 @@ header {
 
 .nav_menu a.active {
     color: goldenrod;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 
